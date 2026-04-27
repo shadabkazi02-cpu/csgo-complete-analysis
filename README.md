@@ -67,3 +67,32 @@ A comprehensive analysis of Counter-Strike: Global Offensive (CS:GO) combining *
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+## ⚠️ IMPORTANT: How to Run This Notebook
+
+### Step 1: Download the datasets from Kaggle
+- [Professional Matches Dataset](https://www.kaggle.com/datasets/mateusdmachado/csgo-professional-matches)
+- [Matchmaking Damage Dataset](https://www.kaggle.com/datasets/skihikingkevin/csgo-matchmaking-damage)
+
+### Step 2: Place files in the same folder as the notebook
+You should have:
+- `results.csv`
+- `players.csv`
+- `esea_master_dmg_demos.part1.csv`
+- `esea_master_kills_demos.part1.csv`
+
+### Step 3: Update the file paths in cells 2 and 8
+
+**In cell 2, change:**
+```python
+# FROM (Kaggle paths):
+results = pd.read_csv('/kaggle/input/datasets/mateusdmachado/csgo-professional-matches/results.csv')
+players = pd.read_csv('/kaggle/input/datasets/mateusdmachado/csgo-professional-matches/players.csv')
+dmg = pd.read_csv('/kaggle/input/datasets/skihikingkevin/csgo-matchmaking-damage/esea_master_dmg_demos.part1.csv')
+kills = pd.read_csv('/kaggle/input/datasets/skihikingkevin/csgo-matchmaking-damage/esea_master_kills_demos.part1.csv')
+
+# TO (local paths):
+results = pd.read_csv('results.csv')
+players = pd.read_csv('players.csv')
+dmg = pd.read_csv('esea_master_dmg_demos.part1.csv')
+kills = pd.read_csv('esea_master_kills_demos.part1.csv')
